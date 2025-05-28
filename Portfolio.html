@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kusuma's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .home {
+      text-align: center;
+      padding-top: 5rem;
+      background-color: #e0f2ff;
+    }
+
+    .home h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .home p {
+      font-size: 1.2rem;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .skill-box {
+      background-color: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      font-weight: bold;
+      color: #0077cc;
+      transition: transform 0.2s;
+    }
+
+    .skill-box:hover {
+      transform: scale(1.05);
+      background-color: #0077cc;
+      color: #fff;
+    }
+
+    .projects-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+
+    .project-card {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-info h3 {
+      margin-top: 0;
+      color: #0077cc;
+    }
+
+    .project-info p {
+      font-size: 1rem;
+    }
+
+    .project-links {
+      margin-top: 1rem;
+    }
+
+    .project-links a {
+      margin-right: 1rem;
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .contact-icons a {
+      text-decoration: none;
+      color: #333;
+      transition: transform 0.2s;
+    }
+
+    .contact-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .contact-icons svg {
+      width: 32px;
+      height: 32px;
+      fill: #0077cc;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 600px) {
+      .projects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kusuma's Portfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="home">
+    <h2>Welcome to My Portfolio</h2>
+    <p>An enthusiastic IT graduate with strong technical skills in Java, Python, and SQL, combined with effective communication and time management abilities. Seeking an opportunity to apply my knowledge, improve my skills, and contribute to innovative projects.</p>
+  </section>
+
+  <section id="about" class="about">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+    <p>
+      Hi, I’m Bandarupalli Kusuma,Student at Vasireddy Venkatadri Institute of Technology. I have a good knowledge of programming in Python, Java, and C. I am Currently working on projects like Academic Evaluation System system.
+
+I’ve done virtual internships in AWS Data Engineering and Cloud Security. I’m interested in full-stack development, cloud platforms, and keeping systems secure.
+
+In my free time, I like solving coding problems, reading, playing  badminton.
+    </p>
+  </section>
+
+  <section id="skills">
+    <div class="section-title">
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-container">
+      <div class="skill-box">HTML</div>
+      <div class="skill-box">CSS</div>
+      <div class="skill-box">JavaScript</div>
+      <div class="skill-box">Java</div>
+      <div class="skill-box">Python</div>
+      <div class="skill-box">SQL</div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="section-title">
+      <h2>Projects</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-info">
+          <h3>Academic Evaluation System</h3>
+          <p>
+            A web-based academic performance evaluation system that allows students to retrieve SGPA, CGPA, and backlog status by entering their roll number. Built with Java Servlets, HTML/CSS/JS, and JDBC Excel integration.
+          </p>
+          <div class="project-links">
+            <a href="#">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>
+            This responsive portfolio showcases my academic background, projects, and contact information. Built using HTML, CSS, and JavaScript.
+          </p>
+          <div class="project-links">
+            <a href="#">Live Demo</a>
+            <a href="#">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="section-title">
+      <h2>Contact Me</h2>
+    </div>
+    <div class="contact-info">
+      <p><strong>Email:</strong> bandarupallikusuma@gmail.com</p>
+      <p><strong>Phone:</strong> +91 6300889683</p>
+    </div>
+    <div class="contact-icons">
+      <a href="https://github.com/Kusuma2205" target="_blank" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 0.3C5.4 0.3 0 5.7 0 12.3c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.2.8-.5v-2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.5 2.4 1 3 .8.1-.6.4-1 .7-1.3-2.7-.3-5.5-1.4-5.5-6.1 0-1.3.5-2.4 1.2-3.3-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.6 11.6 0 016 0C17 5.3 18 5.6 18 5.6c.7 1.6.2 2.9.1 3.2.8.9 1.2 2 1.2 3.3 0 4.7-2.8 5.8-5.5 6.1.4.3.8.9.8 1.8v2.6c0 .3.2.6.8.5A12 12 0 0024 12.3C24 5.7 18.6 0.3 12 0.3z"/>
+        </svg>
+      </a>
+
+      <a href="https://www.linkedin.com/in/kusumabandarupalli/" target="_blank" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 5 3.9 6 2.5 6S0 5 0 3.5 1.1 1 2.5 1s2.48 1 2.48 2.5zM.4 8.4h4.2V24H.4V8.4zM8.5 8.4h4v2.1h.1c.6-1.1 2-2.2 4.1-2.2 4.4 0 5.3 2.8 5.3 6.4V24h-4.2v-6.9c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.4V24h-4.2V8.4z"/>
+        </svg>
+      </a>
+
+      <a href="mailto:bandarupallikusuma@gmail.com" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.3 0-2 .7-2 2v12c0 1.3.7 2 2 2h16c1.3 0 2-.7 2-2V6c0-1.3-.7-2-2-2zm0 2v.5L12 13 4 6.5V6h16zM4 18v-9.2l8 6.5 8-6.5V18H4z"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kusuma. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
