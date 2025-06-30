@@ -2,195 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kusuma's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kusuma Portfolio</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      margin: 0;
+      font-family: Arial, sans-serif;
       line-height: 1.6;
     }
-
-    header {
-      background-color: #0077cc;
-      color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    header, footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
     }
-
-    header h1 {
-      font-size: 1.5rem;
-    }
-
     nav a {
       color: white;
-      margin-left: 1rem;
+      margin: 0 1em;
       text-decoration: none;
-      font-weight: 500;
     }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
+      padding: 4em 2em;
     }
-
-    .section-title {
+    .hero {
+      background: linear-gradient(to right, #e0f7fa, #ede7f6);
       text-align: center;
-      margin-bottom: 2rem;
     }
-
-    .section-title h2 {
-      font-size: 2rem;
-      color: #222;
+    .hero h1 span {
+      display: block;
+      background: linear-gradient(to right, #1e88e5, #8e24aa);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
     }
-
-    .home {
-      text-align: center;
-      padding-top: 5rem;
-      background-color: #e0f2ff;
-    }
-
-    .home h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .home p {
-      font-size: 1.2rem;
-    }
-
-    .about p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .skill-box {
-      background-color: #fff;
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    .btn {
+      display: inline-block;
+      padding: 0.7em 1.5em;
+      border-radius: 25px;
+      margin: 1em 0.5em;
+      text-decoration: none;
       font-weight: bold;
-      color: #0077cc;
-      transition: transform 0.2s;
     }
-
-    .skill-box:hover {
-      transform: scale(1.05);
-      background-color: #0077cc;
-      color: #fff;
+    .btn-primary {
+      background: linear-gradient(to right, #1e88e5, #8e24aa);
+      color: white;
     }
-
-    .projects-grid {
+    .btn-secondary {
+      border: 2px solid #1e88e5;
+      color: #1e88e5;
+    }
+    .skills-grid, .projects-grid {
       display: grid;
-      gap: 2rem;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5em;
+      margin-top: 2em;
     }
-
-    .project-card {
-      background: #ffffff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .project-info h3 {
-      margin-top: 0;
-      color: #0077cc;
-    }
-
-    .project-info p {
-      font-size: 1rem;
-    }
-
-    .project-links {
-      margin-top: 1rem;
-    }
-
-    .project-links a {
-      margin-right: 1rem;
-      color: #007BFF;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .project-links a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-info {
+    .skill, .project {
       text-align: center;
-      margin-bottom: 1.5rem;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 1em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
-
-    .contact-icons {
+    .skill img, .project img {
+      width: 60px;
+      height: 60px;
+    }
+    .project img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .about p, .contact p {
+      max-width: 700px;
+      margin: 1em auto;
+      color: #555;
+    }
+    .contact-info {
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
+      gap: 2em;
+      flex-wrap: wrap;
+      margin-top: 2em;
     }
-
-    .contact-icons a {
-      text-decoration: none;
-      color: #333;
-      transition: transform 0.2s;
-    }
-
-    .contact-icons a:hover {
-      transform: scale(1.2);
-    }
-
-    .contact-icons svg {
-      width: 32px;
-      height: 32px;
-      fill: #0077cc;
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    @media (min-width: 600px) {
-      .projects-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+    .contact-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 1em 2em;
+      background: #f9f9f9;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Kusuma's Portfolio</h1>
+    <h1>Hello, I'm Kusuma</h1>
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -200,102 +107,74 @@
     </nav>
   </header>
 
-  <section id="home" class="home">
-    <h2>Welcome to My Portfolio</h2>
-    <p>An enthusiastic IT graduate with strong technical skills in Java, Python, and SQL, combined with effective communication and time management abilities. Seeking an opportunity to apply my knowledge, improve my skills, and contribute to innovative projects.</p>
+  <section id="home" class="hero">
+    <h1>Welcome to my <span>Portfolio</span></h1>
+    <p>I'm Kusuma, an IT Undergraduate specializing in software development and cloud security.</p>
+    <a href="#projects" class="btn btn-primary">View My Work</a>
+    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
   </section>
 
   <section id="about" class="about">
-    <div class="section-title">
-      <h2>About Me</h2>
-    </div>
-    <p>
-      Hi, I’m Bandarupalli Kusuma,Student at Vasireddy Venkatadri Institute of Technology. I have a good knowledge of programming in Python, Java, and C. I am Currently working on projects like Academic Evaluation System system.
-
-I’ve done virtual internships in AWS Data Engineering and Cloud Security. I’m interested in full-stack development, cloud platforms, and keeping systems secure.
-
-In my free time, I like solving coding problems, reading, playing  badminton.
-    </p>
+    <h2>About Me</h2>
+    <p>I am pursuing a Bachelor of Engineering in Information Technology at <strong>Vasireddy Venkatadri Institute of Technology</strong>. My passion lies in building real-world applications that solve meaningful problems.</p>
+    <p>I enjoy learning new technologies and staying up-to-date with industry trends. I've completed internships in <strong>AWS Data Engineering</strong> and <strong>Zero Trust Cloud Security</strong>, which have given me valuable hands-on experience.</p>
   </section>
 
   <section id="skills">
-    <div class="section-title">
-      <h2>Skills</h2>
-    </div>
-    <div class="skills-container">
-      <div class="skill-box">HTML</div>
-      <div class="skill-box">CSS</div>
-      <div class="skill-box">JavaScript</div>
-      <div class="skill-box">Java</div>
-      <div class="skill-box">Python</div>
-      <div class="skill-box">SQL</div>
+    <h2 style="text-align:center">Skills & Technologies</h2>
+    <div class="skills-grid">
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" /><p>HTML</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" /><p>CSS</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /><p>JavaScript</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><p>Python</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" /><p>Java</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" /><p>C</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" /><p>VS Code</p></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg" alt="Eclipse" /><p>Eclipse</p></div>
     </div>
   </section>
 
-  <section id="projects" class="projects">
-    <div class="section-title">
-      <h2>Projects</h2>
-    </div>
+  <section id="projects">
+    <h2 style="text-align:center">Featured Projects</h2>
     <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-info">
-          <h3>Academic Evaluation System</h3>
-          <p>
-            A web-based academic performance evaluation system that allows students to retrieve SGPA, CGPA, and backlog status by entering their roll number. Built with Java Servlets, HTML/CSS/JS, and JDBC Excel integration.
-          </p>
-          <div class="project-links">
-            <a href="#">GitHub Repo</a>
-          </div>
-        </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=250&fit=crop" alt="Career Guidance" />
+        <h3>Career Guidance Platform</h3>
+        <p>Platform that helps students discover suitable career paths based on interests and trends. Includes assessment tools, real-time analytics, and personalized recommendations for academic and professional growth.</p>
       </div>
-
-      <div class="project-card">
-        <div class="project-info">
-          <h3>Portfolio Website</h3>
-          <p>
-            This responsive portfolio showcases my academic background, projects, and contact information. Built using HTML, CSS, and JavaScript.
-          </p>
-          <div class="project-links">
-            <a href="#">Live Demo</a>
-            <a href="#">GitHub Repo</a>
-          </div>
-        </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=250&fit=crop" alt="Portfolio" />
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio to showcase skills and projects using modern web technologies. Features include smooth scrolling, project previews, and an elegant interface designed for better visibility and interaction.</p>
       </div>
     </div>
   </section>
 
   <section id="contact" class="contact">
-    <div class="section-title">
-      <h2>Contact Me</h2>
-    </div>
+    <h2 style="text-align:center">Get In Touch</h2>
+    <p>I'm always open to new opportunities and collaborations. Feel free to connect!</p>
     <div class="contact-info">
-      <p><strong>Email:</strong> bandarupallikusuma@gmail.com</p>
-      <p><strong>Phone:</strong> +91 6300889683</p>
-    </div>
-    <div class="contact-icons">
-      <a href="https://github.com/Kusuma2205" target="_blank" aria-label="GitHub">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M12 0.3C5.4 0.3 0 5.7 0 12.3c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.2.8-.5v-2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.5 2.4 1 3 .8.1-.6.4-1 .7-1.3-2.7-.3-5.5-1.4-5.5-6.1 0-1.3.5-2.4 1.2-3.3-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.6 11.6 0 016 0C17 5.3 18 5.6 18 5.6c.7 1.6.2 2.9.1 3.2.8.9 1.2 2 1.2 3.3 0 4.7-2.8 5.8-5.5 6.1.4.3.8.9.8 1.8v2.6c0 .3.2.6.8.5A12 12 0 0024 12.3C24 5.7 18.6 0.3 12 0.3z"/>
-        </svg>
-      </a>
-
-      <a href="https://www.linkedin.com/in/kusumabandarupalli/" target="_blank" aria-label="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M4.98 3.5C4.98 5 3.9 6 2.5 6S0 5 0 3.5 1.1 1 2.5 1s2.48 1 2.48 2.5zM.4 8.4h4.2V24H.4V8.4zM8.5 8.4h4v2.1h.1c.6-1.1 2-2.2 4.1-2.2 4.4 0 5.3 2.8 5.3 6.4V24h-4.2v-6.9c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.4V24h-4.2V8.4z"/>
-        </svg>
-      </a>
-
-      <a href="mailto:bandarupallikusuma@gmail.com" aria-label="Email">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M20 4H4c-1.3 0-2 .7-2 2v12c0 1.3.7 2 2 2h16c1.3 0 2-.7 2-2V6c0-1.3-.7-2-2-2zm0 2v.5L12 13 4 6.5V6h16zM4 18v-9.2l8 6.5 8-6.5V18H4z"/>
-        </svg>
-      </a>
+      <div class="contact-card">
+        <strong>Email:</strong><br />
+        <a href="mailto:bandarupallikusuma@gmail.com">bandarupallikusuma@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <strong>Phone:</strong><br />
+        <span>+91 6300889683</span>
+      </div>
+      <div class="contact-card">
+        <strong>GitHub:</strong><br />
+        <a href="https://github.com/Kusuma2205" target="_blank">github.com/Kusuma2205</a>
+      </div>
+      <div class="contact-card">
+        <strong>LinkedIn:</strong><br />
+        <a href="https://www.linkedin.com/in/kusumabandarupalli/" target="_blank">linkedin.com/in/kusumabandarupalli</a>
+      </div>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Kusuma. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
